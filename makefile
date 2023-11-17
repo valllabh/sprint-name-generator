@@ -23,6 +23,7 @@ build:
 
 	# copy script.js to dist
 	cp ./src/js/script.js ./dist/js/
+
 	# minify script.js
 	npx terser ./dist/js/script.js --output ./dist/js/script.js --compress --mangle
 
