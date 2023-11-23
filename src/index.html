@@ -2,36 +2,41 @@
 <html>
 
 <head>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <link rel="stylesheet" href="/dist/css/style.css">
     <script src="js/script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="title" content="Sprint Name Generator">
-    <meta name="description" content="Efficiently create custom sprint names with our Sprint Name Generator. Ideal for agile project management, set your sprint prefix, duration, and dates to generate structured sprint names. Enhance your project planning today.">
-    <meta name="keywords" content="sprint name generator, agile project management, sprint planning, sprint scheduling, agile sprints, project management tools, sprint duration setup, agile methodology, sprint calendar, software development">
+    <meta name="description"
+        content="Efficiently create custom sprint names with our Sprint Name Generator. Ideal for agile project management, set your sprint prefix, duration, and dates to generate structured sprint names. Enhance your project planning today.">
+    <meta name="keywords"
+        content="sprint name generator, agile project management, sprint planning, sprint scheduling, agile sprints, project management tools, sprint duration setup, agile methodology, sprint calendar, software development">
     <meta name="robots" content="index, follow">
     <meta name="web_author" content="Sprint Name Generator">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://valllabh.github.io/sprint-name-generator/">
     <meta property="og:title" content="Sprint Name Generator - For Your Agile Sprints">
-    <meta property="og:description" content="Use our Sprint Name Generator for agile project management to quickly generate structured sprint names. Enter your sprint details and get organized sprint identifiers for better project tracking.">
-    
+    <meta property="og:description"
+        content="Use our Sprint Name Generator for agile project management to quickly generate structured sprint names. Enter your sprint details and get organized sprint identifiers for better project tracking.">
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://valllabh.github.io/sprint-name-generator/">
     <meta property="twitter:title" content="Sprint Name Generator - For Agile Project Management">
-    <meta property="twitter:description" content="Simplify your sprint planning with our Sprint Name Generator. Perfect for agile projects, just input your sprint details to generate names instantly. Try it now for streamlined project management.">
+    <meta property="twitter:description"
+        content="Simplify your sprint planning with our Sprint Name Generator. Perfect for agile projects, just input your sprint details to generate names instantly. Try it now for streamlined project management.">
 
 </head>
 
 <body>
 
-    <div class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <div class="isolate bg-white px-6 py-24 sm:py-10 lg:px-8">
         <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
             aria-hidden="true">
             <div class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
@@ -41,8 +46,11 @@
         <div>
             <div class="mx-auto max-w-2xl text-center">
                 <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Sprint Name Generator</h2>
-                <p class="mt-2 text-lg leading-8 text-gray-600"></p>
+                <p class="mt-2 text-sm leading-8 text-gray-600">
+                    Just input your sprint details to generate sprint names instantly.
+                </p>
             </div>
+
             <form class="mx-auto mt-16 max-w-xl sm:mt-20 sprint-config">
                 <div class="space-y-12">
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -74,15 +82,15 @@
                         </div>
                         <div class="sm:col-span-3">
                             <label for="sprint-start-date"
-                                class="block text-sm font-medium leading-6 text-gray-900">Sprint Start Date</label>
+                                class="block text-sm font-medium leading-6 text-gray-900">Start Date</label>
                             <div class="mt-2">
                                 <input id="sprint-start-date" name="sprint-start-date" type="date"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
                         <div class="sm:col-span-3">
-                            <label for="sprint-end-date"
-                                class="block text-sm font-medium leading-6 text-gray-900">Sprint End Date</label>
+                            <label for="sprint-end-date" class="block text-sm font-medium leading-6 text-gray-900">End
+                                Date</label>
                             <div class="mt-2">
                                 <input id="sprint-end-date" name="sprint-end-date" type="date"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
@@ -90,23 +98,61 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="mt-6 flex items-center justify-center gap-x-6">
+
                     <button onclick="return generateSprintName()" type="button"
-                        class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Generate</button>
+                        class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Generate
+                        List of Sprints</button>
                 </div>
+
+
             </form>
         </div>
+
         <div class="mx-auto mt-16 max-w-xl sm:mt-20">
+            <div class="mt-6 items-center justify-center gap-x-6 py-10">
+                <h3>Copy URL for future reference</h3>
+                <p class="mt-2 text-sm leading-8 text-gray-600 text-left">
+                    <span id="sample-url"></span>
+                </p>
+                <h3>Sprint Format</h3>
+                <p class="mt-2 text-sm leading-8 text-gray-600 text-left>
+                    Sprint format is <span class=" font-bold">[Sprint Prefix][Quarter of Sprint Start Date][Year of
+                    Sprint Start Date]SP[Sprint Number]</span>
+                </p>
+            </div>
+            <h2>Sprint Names</h2>
             <ul role="list" class="divide-y divide-gray-100 sprint-list"></ul>
         </div>
 
     </div>
 
 
-    </div>
-    </div>
 
 
+
+    <footer class="mt-10 flex-none">
+        <div class="sm:px-8">
+            <div class="mx-auto w-full max-w-7xl lg:px-8">
+                <div class="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
+                    <div class="relative px-4 sm:px-8 lg:px-12">
+                        <div class="mx-auto max-w-2xl lg:max-w-5xl">
+                            <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+                                <p class="text-sm text-zinc-400 dark:text-zinc-500">
+                                    Open-sourced under the Apache 2.0 license.
+                                </p>
+                                <p class="align-bottom">
+                                    <a class="github-button" href="https://github.com/valllabh/sprint-name-generator"
+                                        aria-label="Star valllabh/sprint-name-generator on GitHub">Star</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 
