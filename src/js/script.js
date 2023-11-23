@@ -5,7 +5,7 @@ function generateSprintName() {
 
     var sprintStartDate = moment($("#sprint-start-date").val());
     var sprintEndDate = moment($("#sprint-end-date").val());
-    var sprintDurationWeeks = moment.duration($("#sprint-duration").val(), 'weeks').subtract(1, 'day');
+    var sprintDurationWeeks = moment.duration($("#sprint-duration").val(), 'weeks');
 
     if (sprintPrefix && sprintStartDate && sprintEndDate && sprintStartDate.isBefore(sprintEndDate) && sprintDurationWeeks) {
 
@@ -17,7 +17,7 @@ function generateSprintName() {
             var sprint = {
                 name: sprintPrefix + "Q" + currentDate.format('QYY') + "SP" + (sprintNumber++),
                 startDate: currentDate.clone().startOf('day'),
-                endDate: currentDate.clone().add(sprintDurationWeeks).endOf('day')
+                endDate: currentDate.clone().add(sprintDurationWeeks).subtract(1, 'day').endOf('day')
             }
 
             sprintList.push(sprint);
@@ -35,16 +35,19 @@ function generateSprintName() {
                 '<div class="flex min-w-0 gap-x-4">' +
                 '<div class="min-w-0 flex-auto"> Sprint Name' +
                 '<pre class="language-text">' + sprint.name + '</pre>' +
+                '<small>' + sprint.endDate.diff(sprint.startDate, 'days') + '</small>' +
                 '</div>' +
                 '</div>' +
                 '<div class="flex min-w-0 gap-x-4">' +
                 '<div class="min-w-0 flex-auto"> Start Date' +
                 '<pre class="language-text">' + sprint.startDate.format("DD/MMM/YY hh:mm A") + '</pre>' +
+                '<small>' + sprint.endDate.format("dddd") + '</small>' +
                 '</div>' +
                 '</div>' +
                 '<div class="flex min-w-0 gap-x-4">' +
                 '<div class="min-w-0 flex-auto"> End Date' +
                 '<pre class="language-text">' + sprint.endDate.format("DD/MMM/YY hh:mm A") + '</pre>' +
+                '<small>' + sprint.endDate.format("dddd") + '</small>' +
                 '</div>' +
                 '</div>' +
                 '</div>' +
