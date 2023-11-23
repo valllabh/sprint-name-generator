@@ -35,7 +35,7 @@ function generateSprintName() {
                 '<div class="flex min-w-0 gap-x-4">' +
                 '<div class="min-w-0 flex-auto"> Sprint Name' +
                 '<pre class="language-text">' + sprint.name + '</pre>' +
-                '<small>' + sprint.endDate.diff(sprint.startDate, 'days') + '</small>' +
+                '<small>' + sprint.endDate.diff(sprint.startDate, 'days') + ' days</small>' +
                 '</div>' +
                 '</div>' +
                 '<div class="flex min-w-0 gap-x-4">' +
